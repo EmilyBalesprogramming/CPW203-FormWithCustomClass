@@ -1,0 +1,42 @@
+select{
+    width: 30%;
+    padding: 10px 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(255, 110, 231);
+    margin-top: 1em;
+}
+input[type=button]{
+    background-color: rgb(255, 110, 231);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin-left: 50%;
+    cursor: pointer;
+    
+}
+input[type=button]:hover{
+    background-color: rgb(178, 0, 148);
+}
+label{
+    margin-left: 50%;
+    display: inline-block;
+    color: rgb(178, 0, 148);
+    text-align: right;
+}
+h1{
+    color: rgb(178, 0, 148);
+    margin-left: 50%; 
+}
+input[type=text]{
+    padding: .4em;
+}
+input[type = checkbox]{
+    margin-left: 50%;
+    
+}
+input{
+    margin-top: 1em;
+}
+
