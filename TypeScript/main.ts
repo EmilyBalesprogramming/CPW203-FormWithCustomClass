@@ -13,15 +13,25 @@ window.onload = function(){
 
 }
 function addVideoGame(){
-  if(isAllDataValid()){
+    
+  if(isAllDataValid("price-required", "This is required")){
     let game = getVideoGame();
     displayGame(game);
   }
 }
 //add validation code
-function isAllDataValid(){
+function isAllDataValid(id:string, errMsg:string):boolean{
+    let txtBox = <HTMLInputElement>document.getElementById(id);
+    let txtBoxValue = txtBox.value;
+    if (txtBoxValue == "") {
+        let errorSpan = <HTMLSpanElement>txtBox.nextElementSibling;
+        errorSpan.innerText = errMsg;
+        return false;
+    }
     return true;
 }
+
+
 
 function displayGame(myGame:VideoGame):void{
     let displayDiv = document.getElementById("display");

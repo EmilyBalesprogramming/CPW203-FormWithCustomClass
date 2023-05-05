@@ -8,12 +8,19 @@ window.onload = function () {
     addBtn.onclick = addVideoGame;
 };
 function addVideoGame() {
-    if (isAllDataValid()) {
+    if (isAllDataValid("price-required", "This is required")) {
         var game = getVideoGame();
         displayGame(game);
     }
 }
-function isAllDataValid() {
+function isAllDataValid(id, errMsg) {
+    var txtBox = document.getElementById(id);
+    var txtBoxValue = txtBox.value;
+    if (txtBoxValue == "") {
+        var errorSpan = txtBox.nextElementSibling;
+        errorSpan.innerText = errMsg;
+        return false;
+    }
     return true;
 }
 function displayGame(myGame) {
