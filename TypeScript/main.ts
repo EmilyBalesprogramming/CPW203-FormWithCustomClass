@@ -24,7 +24,26 @@ function isAllDataValid(){
 }
 
 function displayGame(myGame:VideoGame):void{
+    let displayDiv = document.getElementById("display");
+    let notDigitDisplay = "not";
+    if(myGame.isDigitalOnly){
+        notDigitDisplay = "";
+    }
 
+    //create <h2> with game title
+    let gameHeading = document.createElement("h2");
+    gameHeading.innerText = myGame.title;
+
+    //create paragraph with game details
+    let gameInfo = document.createElement("p");
+    
+    
+    gameInfo.innerText = `${myGame.title} has a rating of ${myGame.rating}. It costs $ ${myGame.price.toFixed(2)}. It is ${notDigitDisplay} digital only`;
+    //add <h2> in <div id="display">
+    displayDiv.appendChild(gameHeading);
+
+    //Add <p> game info
+    displayDiv.appendChild(gameInfo);
 
 }
 /**
