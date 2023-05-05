@@ -39,4 +39,18 @@ input[type = checkbox]{
 input{
     margin-top: 1em;
 }
+@media(max-width: 600px) {
+    label{
+        margin-left:20%;
+    }
+    input[type=checkbox]{
+        margin-left: 20%;
+    }
+    input[type=button]{
+        margin-left: 20%;
+    }
+    h1{
+        margin-left: 20%;
+    }
+}
 
